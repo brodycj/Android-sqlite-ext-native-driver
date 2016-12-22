@@ -7,3 +7,4 @@
 
 #include "sqlc.c"
 
+#include "sqlite3_regexp.c"

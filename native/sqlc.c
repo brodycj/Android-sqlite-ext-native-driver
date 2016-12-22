@@ -6,6 +6,8 @@
 
 #include "sqlite3.h"
 
+#include "sqlite3_regexp.h"
+
 #define BASE_HANDLE_OFFSET 0x100000000LL
 
 #ifdef SQLC_KEEP_ANDROID_LOG
@@ -34,6 +36,7 @@ sqlc_handle_t sqlc_db_open(const char *filename, int flags)
 {
   sqlite3 *d1;
   int r1;
+  const char * err;
 
   MYLOG("db_open %s %d", filename, flags);
 
@@ -41,7 +44,12 @@ sqlc_handle_t sqlc_db_open(const char *filename, int flags)
 
   MYLOG("db_open %s result %d ptr %p", filename, r1, d1);
 
-  return (r1 == 0) ? HANDLE_FROM_VP(d1) : -r1;
+  if (r1 != 0) return -r1;
+
+  // TBD IGNORE result:
+  sqlite3_regexp_init(d1, &err);
+
+  return HANDLE_FROM_VP(d1);
 }
 
 sqlc_handle_t sqlc_db_prepare_st(sqlc_handle_t db, const char *sql)

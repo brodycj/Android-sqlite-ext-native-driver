@@ -1,8 +1,8 @@
-# Android sqlite native driver
+# Android sqlite native driver with extra features
 
-Provides a native build of sqlite with a low-level interface for Android libraries.
+Provides a native build of sqlite with a low-level interface for Android libraries with extra features: sqlite3-regexp-cached
 
-Based on [SQLiteGlue-core](https://github.com/sqlg/SQLiteGlue-core), which may be adapted for other Java platforms.
+Based on: [liteglue / Android-sqlite-native-driver](https://github.com/liteglue/Android-sqlite-native-driver)
 
 by Christopher J. Brody aka Chris Brody mailto: brodybits@litehelpers.net
 
@@ -10,15 +10,15 @@ License: UNLICENSE (public domain).
 
 ## About
 
-Android-sqlite-native-driver provides:
-- single `SQLiteNative` class with native Java interface to an important subset of sqlite C functions
+Android-sqlite-ext-native-driver provides:
+- single `SQLiteNative` class with native Java interface to an important subset of sqlite C functions, with `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin)
 - automatic build of `sqlite-native-driver-libs.zip`, with native sqlite library build for major Android targets (`armeabi`, `armeabi-v7a`, `x86`, `x86_64`) that is accessible from the native Java interface
 
 This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a simple wrapper C module.
 
 This project is meant to help build a higher-level sqlite interface library, with the JNI layer completely isolated.
 
-**NOTE:** This project references the `gluegentools` and `sqlite-amalgamation` subprojects, which are resolved by: $ `make init` (as described below).
+**NOTE:** This project references multiple subprojects, which may be resolved by: $ `make init` (as described below).
 
 **WARNING:** The sqlite database and statement handles that are returned by the `SQLiteNative` library functions are raw C pointer values (with `0x100000000` added). If someone uses a sqlite database or statement handle that is not valid, or no longer valid with the `SQLiteNative` library the behavior is undefined (such as a crash). It is *NOT* recommended to use this API directly unless you really understand how this library works internally.
 

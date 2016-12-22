@@ -10,6 +10,7 @@ LOCAL_LDLIBS := -llog
 LOCAL_MODULE := sqlc-native-driver
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../sqlite-amalgamation
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../sqlite3-regexp-cached
 
 LOCAL_CFLAGS += -DSQLITE_TEMP_STORE=2
 LOCAL_CFLAGS += -DSQLITE_THREADSAFE=1
