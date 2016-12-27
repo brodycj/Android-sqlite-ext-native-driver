@@ -6,15 +6,15 @@ Based on: [liteglue / Android-sqlite-native-driver](https://github.com/liteglue/
 
 by Christopher J. Brody aka Chris Brody mailto: brodybits@litehelpers.net
 
-License: UNLICENSE (public domain).
+**LICENSE:** [Unlicense (unlicense.org)](http://unlicense.org/) (public domain)
 
 ## About
 
 Android-sqlite-ext-native-driver provides:
-- single `SQLiteNative` class with native Java interface to an important subset of sqlite C functions, with the following user defined functions:
-  - `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin)
-  - `BASE64` integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter)
-- automatic build of `sqlite-native-driver-libs.zip`, with native sqlite library build for major Android targets (`armeabi`, `armeabi-v7a`, `x86`, `x86_64`) that is accessible from the native Java interface
+- single `SQLiteNative` class with Java native interface (JNI) to an important subset sqlite C functions
+- automatic build of sqlite3 (<http://sqlite.org/>, public domain) for NDK, accessible from JNI, with the following user defined functions:
+  - `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
+  - `BASE64` integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
 
 This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a simple wrapper C module.
 
