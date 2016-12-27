@@ -8,6 +8,8 @@
 
 #include "sqlite3_regexp.h"
 
+#include "sqlite3_base64.h"
+
 #define BASE_HANDLE_OFFSET 0x100000000LL
 
 #ifdef SQLC_KEEP_ANDROID_LOG
@@ -48,6 +50,8 @@ sqlc_handle_t sqlc_db_open(const char *filename, int flags)
 
   // TBD IGNORE result:
   sqlite3_regexp_init(d1, &err);
+
+  sqlite3_base64_init(d1);
 
   return HANDLE_FROM_VP(d1);
 }

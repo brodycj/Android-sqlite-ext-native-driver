@@ -1,6 +1,6 @@
 # Android sqlite native driver with extra features
 
-Provides a native build of sqlite with a low-level interface for Android libraries with extra features: sqlite3-regexp-cached
+Provides a native build of sqlite with a low-level interface for Android libraries with extra features: REGEXP, BASE64
 
 Based on: [liteglue / Android-sqlite-native-driver](https://github.com/liteglue/Android-sqlite-native-driver)
 
@@ -11,7 +11,9 @@ License: UNLICENSE (public domain).
 ## About
 
 Android-sqlite-ext-native-driver provides:
-- single `SQLiteNative` class with native Java interface to an important subset of sqlite C functions, with `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin)
+- single `SQLiteNative` class with native Java interface to an important subset of sqlite C functions, with the following user defined functions:
+  - `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin)
+  - `BASE64` integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter)
 - automatic build of `sqlite-native-driver-libs.zip`, with native sqlite library build for major Android targets (`armeabi`, `armeabi-v7a`, `x86`, `x86_64`) that is accessible from the native Java interface
 
 This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a simple wrapper C module.
@@ -46,7 +48,6 @@ TBD API and some internal details (probably in a blog post)
 
 - Automatic AAR build
 - Document this project (again, perhaps in a blog post)
-- Support BLOB type
 - Some more SQLite API functions will be needed to rebuild the native sqlcipher library to replace the native libraries in the [@sqlcipher / android-database-sqlcipher](https://github.com/sqlcipher/android-database-sqlcipher) ([SQLCipher for Android](https://www.zetetic.net/sqlcipher/sqlcipher-for-android/)) project.
 
 # Building
