@@ -1,6 +1,6 @@
 # Android sqlite native driver with extra features
 
-Provides a native build of sqlite with a low-level interface for Android libraries with extra features: REGEXP, BASE64
+Provides Android NDK build of sqlite3 (<http://sqlite.org/>, public domain) with a low-level JNI interface accessible from a single (singleton) single `SQLiteNative` class, along with the following extra features: REGEXP, BASE64
 
 Based on: [liteglue / Android-sqlite-native-driver](https://github.com/liteglue/Android-sqlite-native-driver)
 
@@ -12,7 +12,7 @@ by Christopher J. Brody aka Chris Brody mailto: brodybits@litehelpers.net
 
 Android-sqlite-ext-native-driver provides:
 - single `SQLiteNative` class with Java native interface (JNI) to an important subset sqlite C functions
-- automatic build of sqlite3 (<http://sqlite.org/>, public domain) for NDK, accessible from JNI, with the following user defined functions:
+- automatic build of `sqlite-native-driver-libs.zip` for major Android NDK targets (`armeabi` / `armeabi-v7a` / `x86` / `x86_64` / `arm64-v8a`), with sqlite3 component along with the following user defined functions:
   - `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
   - `BASE64` integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
 
