@@ -34,7 +34,7 @@ FUTURE TODO: better documentation of API and some internal details
 
 ### SQLite build flags
 
-- `-DSQLITE_THREADSAFE=2`
+- `-DSQLITE_THREADSAFE=1`
 - `-DSQLITE_DEFAULT_MEMSTATUS=0`
 - `-DSQLITE_OMIT_DECLTYPE`
 - `-DSQLITE_OMIT_DEPRECATED`
