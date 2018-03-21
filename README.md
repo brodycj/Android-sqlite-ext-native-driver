@@ -1,4 +1,4 @@
-# Android sqlite native driver
+# Android sqlite native driver - cordova-sqlite-storage native driver branch
 
 Provides Android NDK build of sqlite3 (<http://sqlite.org/>, public domain) with a low-level JNI interface accessible from a single (singleton) single `SQLiteNative` class.
 
