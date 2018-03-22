@@ -30,11 +30,12 @@ FUTURE TODO: better documentation of API and some internal details
 
 ### SQLite version
 
-    3.15.2
+    3.22.0
 
 ### SQLite build flags
 
 - `-DSQLITE_THREADSAFE=1`
+- `-DSQLITE_DEFAULT_SYNCHRONOUS=3`
 - `-DSQLITE_DEFAULT_MEMSTATUS=0`
 - `-DSQLITE_OMIT_DECLTYPE`
 - `-DSQLITE_OMIT_DEPRECATED`
