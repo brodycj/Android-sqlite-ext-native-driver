@@ -4,7 +4,10 @@
 # http://mobile.tutsplus.com/tutorials/android/ndk-tutorial/
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)  
+
+# XXX TODO ROOT_PATH & SRC_PATH
 
 LOCAL_LDLIBS := -llog
 LOCAL_MODULE := sqlc-native-driver
