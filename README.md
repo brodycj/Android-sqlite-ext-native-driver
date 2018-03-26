@@ -54,6 +54,13 @@ FUTURE TODO: better documentation of API and some internal details
 
 **NOTE:** Old default page/cache size values are used to avoid a "potentially disruptive change" described at: http://sqlite.org/pgszchng2016.html
 
+## Dependencies
+
+- SQLite (<https://sqlite.org/>) - public domain
+- [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) - based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain
+- [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64) - Unlicense (public domain) ref: <http://unlicense.org/>
+- [brodybits / libb64-encode](https://github.com/brodybits/libb64-encode) - based on <http://libb64.sourceforge.net/> by Chris Venter, public domain
+
 ## Major TODOs and limitations
 
 - Automatic AAR build
