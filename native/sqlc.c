@@ -41,6 +41,8 @@ sqlc_handle_t sqlc_db_open(const char *filename, int flags)
 
   MYLOG("db_open %s result %d ptr %p", filename, r1, d1);
 
+  sqlite3_db_config(d1, SQLITE_DBCONFIG_DEFENSIVE, 1, NULL);
+
   return (r1 == 0) ? HANDLE_FROM_VP(d1) : -r1;
 }
 
