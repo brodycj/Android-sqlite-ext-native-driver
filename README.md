@@ -22,6 +22,8 @@ This project is meant to help build a higher-level sqlite interface library, wit
 
 **WARNING:** The sqlite database and statement handles that are returned by the `SQLiteNative` library functions are raw C pointer values (with `0x100000000` added). If someone uses a database or statement handle that is not valid, or no longer valid with the `SQLiteNative` library the behavior is undefined (may crash, for example). It is NOT recommended to use the API directly without understanding of how this library works internally.
 
+**BUILD NOTICE:** `android-ndk` pre-17 is needed since this project still supports the deprecated `armeabi` target CPU.
+
 FUTURE TODO: better documentation of API and some internal details
 
 ## SQLite build information
