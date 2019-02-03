@@ -18,6 +18,8 @@ This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a
 
 This project is meant to help build a higher-level sqlite interface library, with the JNI layer completely isolated.
 
+Minimum API level: android-14 (Android 4.0)
+
 **NOTE:** This project references the `gluegentools` and `sqlite-amalgamation` subprojects, which are resolved by: $ `make init` (as described below).
 
 **WARNING:** The sqlite database and statement handles that are returned by the `SQLiteNative` library functions are raw C pointer values (with `0x100000000` added). If someone uses a database or statement handle that is not valid, or no longer valid with the `SQLiteNative` library the behavior is undefined (may crash, for example). It is NOT recommended to use the API directly without understanding of how this library works internally.
