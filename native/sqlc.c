@@ -48,6 +48,8 @@ sqlc_handle_t sqlc_db_open(const char *filename, int flags)
 
   if (r1 != 0) return -r1;
 
+  sqlite3_db_config(d1, SQLITE_DBCONFIG_DEFENSIVE, 1, NULL);
+
   // TBD IGNORE result:
   sqlite3_regexp_init(d1, &err);
 
