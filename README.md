@@ -26,6 +26,18 @@ Minimum API level: android-14 (Android 4.0)
 
 **BUILD NOTICE:** `android-ndk` pre-17 is needed since this project still supports the deprecated `armeabi` target CPU.
 
+See the following reference for installing older `android-ndk` cask using Homebrew: <https://www.jverdeyen.be/mac/downgrade-brew-cask-application/>
+
+To install `android-ndk` version `r16b`, for example:
+
+```sh
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/4570652dc6a3a8f7fd2be1053dd43547a2c78e26/Casks/android-ndk.rb
+```
+
+See also: <https://github.com/Homebrew/homebrew-cask/commits/2d99137bbb809300d720f43fe0ed979964eb5e2b/Casks/android-ndk.rb>
+
+Note that `homebrew-cask` seems to have dropped maintenance of the `android-ndk` cask: <https://github.com/Homebrew/homebrew-cask/issues/58883>
+
 FUTURE TODO: better documentation of API and some internal details
 
 ## SQLite build information
