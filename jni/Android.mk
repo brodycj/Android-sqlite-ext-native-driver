@@ -24,11 +24,11 @@ LOCAL_CFLAGS += -DSQLITE_ENABLE_FTS3
 LOCAL_CFLAGS += -DSQLITE_ENABLE_FTS3_PARENTHESIS
 LOCAL_CFLAGS += -DSQLITE_ENABLE_FTS4
 LOCAL_CFLAGS += -DSQLITE_ENABLE_RTREE
-# Avoid "potential disruptive change" from 3.12.0 described at:
+# new stable default page size ref:
 # - http://sqlite.org/releaselog/3_12_0.html
 # - http://sqlite.org/pgszchng2016.html
-LOCAL_CFLAGS += -DSQLITE_DEFAULT_PAGE_SIZE=1024
-LOCAL_CFLAGS += -DSQLITE_DEFAULT_CACHE_SIZE=2000
+LOCAL_CFLAGS += -DSQLITE_DEFAULT_PAGE_SIZE=4096
+LOCAL_CFLAGS += -DSQLITE_DEFAULT_CACHE_SIZE=-2000
 
 LOCAL_SRC_FILES := ../native/sqlc_all.c
 

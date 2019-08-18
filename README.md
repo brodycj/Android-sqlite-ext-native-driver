@@ -61,10 +61,11 @@ FUTURE TODO: better documentation of API and some internal details
 - `-DSQLITE_ENABLE_FTS3_PARENTHESIS`
 - `-DSQLITE_ENABLE_FTS4`
 - `-DSQLITE_ENABLE_RTREE`
-- `-DSQLITE_DEFAULT_PAGE_SIZE=1024`
-- `-DSQLITE_DEFAULT_CACHE_SIZE=2000`
 
-**NOTE:** Old default page/cache size values are used to avoid a "potentially disruptive change" described at: http://sqlite.org/pgszchng2016.html
+New stable default page size and cache size (<https://sqlite.org/pgszchng2016.html>):
+
+- `-DSQLITE_DEFAULT_PAGE_SIZE=4096`
+- `-DSQLITE_DEFAULT_CACHE_SIZE=-2000`
 
 ## Major TODOs and limitations
 
