@@ -4,7 +4,7 @@ Provides Android NDK build of sqlite3 (<http://sqlite.org/>, public domain) with
 
 Based on [SQLiteGlue-core](https://github.com/sqlg/SQLiteGlue-core), which may be adapted for other Java platforms.
 
-by Christopher J. Brody aka Chris Brody mailto: <brodybits@litehelpers.net>
+by Christopher J. Brody aka Chris Brody mailto: <chris@brody.consulting>
 
 License: UNLICENSE (public domain).
 
@@ -34,9 +34,13 @@ To install `android-ndk` version `r16b`, for example:
 brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/4570652dc6a3a8f7fd2be1053dd43547a2c78e26/Casks/android-ndk.rb
 ```
 
-See also: <https://github.com/Homebrew/homebrew-cask/commits/2d99137bbb809300d720f43fe0ed979964eb5e2b/Casks/android-ndk.rb>
+Note that `homebrew-cask` seems to have restored maintenance of the `android-ndk` cask, as discussed in [`Homebrew/homebrew-cask#58883`](https://github.com/Homebrew/homebrew-cask/issues/58883).
 
-Note that `homebrew-cask` seems to have dropped maintenance of the `android-ndk` cask: <https://github.com/Homebrew/homebrew-cask/issues/58883>
+See also for some historical `android-ndk` cask information:
+
+- https://github.com/Homebrew/homebrew-cask/commits/master/Casks/android-ndk.rb
+- https://github.com/Homebrew/homebrew-cask/commits/5e9f77552aef2ffa29efe8a9b916d89686b96c7f/Casks/android-ndk.rb
+- https://github.com/Homebrew/homebrew-cask/blob/5e9f77552aef2ffa29efe8a9b916d89686b96c7f/Casks/android-ndk.rb
 
 FUTURE TODO: better documentation of API and some internal details
 
