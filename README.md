@@ -48,7 +48,7 @@ FUTURE TODO: better documentation of API and some internal details
 
 ### SQLite version
 
-    3.28.0
+    3.30.1
 
 ### SQLite build flags
 
