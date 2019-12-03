@@ -4,7 +4,7 @@ Provides Android NDK build of sqlite3 (<http://sqlite.org/>, public domain) with
 
 Based on: [liteglue / Android-sqlite-native-driver](https://github.com/liteglue/Android-sqlite-native-driver)
 
-by Christopher J. Brody aka Chris Brody mailto: <brodybits@litehelpers.net>
+by Christopher J. Brody aka Chris Brody mailto: <chris@brody.consulting>
 
 **LICENSE:** [Unlicense (unlicense.org)](http://unlicense.org/) (public domain)
 
@@ -36,9 +36,13 @@ To install `android-ndk` version `r16b`, for example:
 brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/4570652dc6a3a8f7fd2be1053dd43547a2c78e26/Casks/android-ndk.rb
 ```
 
-See also: <https://github.com/Homebrew/homebrew-cask/commits/2d99137bbb809300d720f43fe0ed979964eb5e2b/Casks/android-ndk.rb>
+Note that `homebrew-cask` seems to have restored maintenance of the `android-ndk` cask, as discussed in [`Homebrew/homebrew-cask#58883`](https://github.com/Homebrew/homebrew-cask/issues/58883).
 
-Note that `homebrew-cask` seems to have dropped maintenance of the `android-ndk` cask: <https://github.com/Homebrew/homebrew-cask/issues/58883>
+See also for some historical `android-ndk` cask information:
+
+- https://github.com/Homebrew/homebrew-cask/commits/master/Casks/android-ndk.rb
+- https://github.com/Homebrew/homebrew-cask/commits/5e9f77552aef2ffa29efe8a9b916d89686b96c7f/Casks/android-ndk.rb
+- https://github.com/Homebrew/homebrew-cask/blob/5e9f77552aef2ffa29efe8a9b916d89686b96c7f/Casks/android-ndk.rb
 
 FUTURE TODO: better documentation of API and some internal details
 
@@ -46,7 +50,7 @@ FUTURE TODO: better documentation of API and some internal details
 
 ### SQLite version
 
-    3.28.0
+    3.30.1
 
 ### SQLite build flags
 
@@ -65,10 +69,11 @@ FUTURE TODO: better documentation of API and some internal details
 - `-DSQLITE_ENABLE_FTS5`
 - `-DSQLITE_ENABLE_RTREE`
 - `-DSQLITE_ENABLE_JSON1`
-- `-DSQLITE_DEFAULT_PAGE_SIZE=1024`
-- `-DSQLITE_DEFAULT_CACHE_SIZE=2000`
 
-**NOTE:** Old default page/cache size values are used to avoid a "potentially disruptive change" described at: http://sqlite.org/pgszchng2016.html
+New stable default page size and cache size (<https://sqlite.org/pgszchng2016.html>):
+
+- `-DSQLITE_DEFAULT_PAGE_SIZE=4096`
+- `-DSQLITE_DEFAULT_CACHE_SIZE=-2000`
 
 ## Dependencies
 
