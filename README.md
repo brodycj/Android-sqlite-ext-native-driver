@@ -12,19 +12,25 @@ License: UNLICENSE (public domain).
 
 Android-sqlite-native-driver provides the following items:
 - single `SQLiteNative` class with native Java interface to an important subset of sqlite3 C functions
-- automatic build of `sqlite-native-driver.jar` and `sqlite-native-driver-libs.zip` with sqlite3 component for major Android NDK targets (`armeabi` / `armeabi-v7a` / `x86` / `x86_64` / `arm64-v8a`), with sqlite3 component
+- automatic build of `sqlite-native-driver.jar` and `sqlite-native-driver-libs.zip` with sqlite3 component for major Android NDK targets (`armeabi-v7a` / `x86` / `x86_64` / `arm64-v8a`), with sqlite3 component
 
 This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a simple wrapper C module.
 
 This project is meant to help build a higher-level sqlite interface library, with the JNI layer completely isolated.
 
-Minimum API level: android-14 (Android 4.0)
+Minimum API level: android-22 (Android 5.1)
 
 **NOTE:** This project references the `gluegentools` and `sqlite-amalgamation` subprojects, which are resolved by: $ `make init` (as described below).
 
 **WARNING:** The sqlite database and statement handles that are returned by the `SQLiteNative` library functions are raw C pointer values (with `0x100000000` added). If someone uses a database or statement handle that is not valid, or no longer valid with the `SQLiteNative` library the behavior is undefined (may crash, for example). It is NOT recommended to use the API directly without understanding of how this library works internally.
 
-**BUILD NOTICE:** `android-ndk` pre-17 is needed since this project still supports the deprecated `armeabi` target CPU.
+## SQLite build information
+
+### SQLite version
+
+    3.32.3
+
+### android-ndk version notes
 
 See the following reference for installing older `android-ndk` cask using Homebrew: <https://www.jverdeyen.be/mac/downgrade-brew-cask-application/>
 
@@ -43,12 +49,6 @@ See also for some historical `android-ndk` cask information:
 - https://github.com/Homebrew/homebrew-cask/blob/5e9f77552aef2ffa29efe8a9b916d89686b96c7f/Casks/android-ndk.rb
 
 FUTURE TODO: better documentation of API and some internal details
-
-## SQLite build information
-
-### SQLite version
-
-    3.32.3
 
 ### SQLite build flags
 
