@@ -12,7 +12,7 @@ by Christopher J. Brody aka Chris Brody mailto: <chris@brody.consulting>
 
 Android-sqlite-ext-native-driver provides:
 - single `SQLiteNative` class with native Java interface to an important subset of sqlite3 C functions
-- automatic build of `sqlite-native-driver.jar` and `sqlite-native-driver-libs.zip` for major Android NDK targets (~~`armeabi` /~~ `armeabi-v7a` / `x86` / `x86_64` / `arm64-v8a`), with sqlite3 component along with the following user defined functions:
+- automatic build of `sqlite-native-driver.jar` and `sqlite-native-driver-libs.zip` for *current* Android NDK targets (`armeabi-v7a` / `x86` / `x86_64` / `arm64-v8a`), with sqlite3 component along with the following user defined functions:
   - `REGEXP` integrated from [brodybits / sqlite3-regexp-cached](https://github.com/brodybits/sqlite3-regexp-cached) (based on <http://git.altlinux.org/people/at/packages/?p=sqlite3-pcre.git> by Alexey Tourbin, public domain)
   - `BASE64` integrated from [brodybits / sqlite3-base64](https://github.com/brodybits/sqlite3-base64), using [brodybits / libb64-core](https://github.com/brodybits/libb64-core) (based on <http://libb64.sourceforge.net/> by Chris Venter, public domain)
 
