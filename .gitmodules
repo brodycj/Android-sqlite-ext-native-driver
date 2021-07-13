@@ -7,9 +7,9 @@
 [submodule "sqlite3-regexp-cached"]
 	path = sqlite3-regexp-cached
 	url = https://github.com/brodybits/sqlite3-regexp-cached.git
-[submodule "libb64-encode"]
-	path = libb64-encode
-	url = https://github.com/brodybits/libb64-encode.git
 [submodule "sqlite3-base64"]
 	path = sqlite3-base64
 	url = https://github.com/brodybits/sqlite3-base64.git
+[submodule "libb64-core"]
+	path = libb64-core
+	url = https://github.com/brodybits/libb64-core
