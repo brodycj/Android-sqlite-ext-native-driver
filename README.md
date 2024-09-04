@@ -1,3 +1,9 @@
+# WARNING TEST PLUGIN
+
+This plugin is forked from https://github.com/brodycj/Android-sqlite-ext-native-driver, and only provided to test the compilation of new Libs for Android 15 16Kb Page Size.
+
+
+
 # Android sqlite native driver with extra features
 
 Provides Android NDK build of sqlite3 (<http://sqlite.org/>, public domain) with a low-level JNI interface accessible from a single (singleton) single `SQLiteNative` class, along with the following extra features: REGEXP, BASE64
