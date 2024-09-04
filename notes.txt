@@ -1,0 +1,17 @@
+
+Install cygwin: setup-x86_64.exe -q --packages="make zip"
+C:\Users\alex\Documents\GitHub\Android-sqlite-ext-native-driver
+
+Modify jni/Android.mk
+LOCAL_MODULE := sqlc-native-driver --> LOCAL_MODULE := sqlc-ndk-native-driver
+
+Modify jni/Application.mk
+APP_SUPPORT_FLEXIBLE_PAGE_SIZES := true
+
+Open cygwin
+	cd /cygdrive/c/Users/alex/Documents/GitHub/Android-sqlite-native-driver
+	export PATH=$PATH:/cygdrive/c/Users/alex/AppData/Local/Android/Sdk/ndk/27.0.12077973/
+	export PATH=$PATH:export PATH=$PATH:/cygdrive/c/Program\ Files/Java/jdk-18.0.2/bin/
+	source ~/.bashrc
+	make init
+	make
